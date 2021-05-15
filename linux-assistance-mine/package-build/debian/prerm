@@ -1,0 +1,5 @@
+#!/bin/sh
+if [ "$1" = "remove" ]; then
+  rm /etc/init.d/linux-assistance-greet_user > /dev/null
+  rm /etc/rc5.d/S01linux-personal-assistance > /dev/null
+fi

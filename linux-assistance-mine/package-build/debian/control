@@ -1,0 +1,8 @@
+Package: linux-personal-assistance
+Version: 1.0.0-1
+Architecture: all
+Essential: no
+Section: web
+Priority: optional
+Maintainer: sdl.dsr<dsr.sdl.g@gmail.com>
+Description: Linux personal assistance and device handler.

@@ -1,0 +1,11 @@
+# !/bin/sh
+
+greeting=""
+if [ $(date +%H) -lt 12 ]; then
+	greeting='Good Morning'
+elif [ $(date +%H) -lt 18 -a $(date +%H) -gt 12 ]; then
+	greet='Goood Afternoon'
+else'
+	greeting='Good Evening'
+fi
+/opt/linux-personal-assistance/linux-assistance 'welcome' "Hi $greeting, how are you doing?"

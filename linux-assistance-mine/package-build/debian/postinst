@@ -1,0 +1,25 @@
+#!/bin/sh
+
+copyFiles(){
+  cp /opt/linux-personal-assistance/notifiers/greet_user /etc/init.d/linux-assistance-greet_user
+  chown root.root /etc/init.d/linux-assistance-greet_user
+  chmod 755 /etc/init.d/linux-assistance-greet_user
+  ln -s /etc/init.d/linux-assistance-greet_user /etc/rc5.d/S01linux-personal-assistance
+  chown root.root /etc/rc5.d/S01linux-personal-assistance
+  chmod 777 /etc/rc5.d/S01linux-personal-assistance
+}
+welcomeInvitation(){
+  /opt/linux-personal-assistance/linux-assistance 'welcome' "$1"
+}
+
+copyFiles
+
+welcomeInvitation 'Welcome to your personal Assistance, with this you can schedule meetings, get meeting reminders, and also perform your Os updates with your voice commands. Also you will get boot time messages.'
+
+
+exit 0
+
+
+
+
+
