@@ -15,7 +15,6 @@ func (reminder *Reminder)processReminderEvent(){
 	 }
 	 notoifyUser("meeting reminder")
 	 ref.executeAndFilldata(reminder)
-	 loadHeap()
 	 hour,min := deleteNode()
 	 if hour == -1 || min == -1 {
 	 	deleteCronEntry()

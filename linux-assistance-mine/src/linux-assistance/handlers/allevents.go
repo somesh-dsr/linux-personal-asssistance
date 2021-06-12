@@ -107,13 +107,13 @@ func (allevents *CommonEvents)verifyandConvertFomrat(hour,minute int, daytype st
 			}
 
 	}else if daytype == "" {
-		fmt.Println(timer.Hour(),timer.Minute())
-		if hour <= (timer.Hour()%12) && minute <= timer.Minute() {
-			return -1,-1
-		}
-		if timer.Hour()>12 && hour < 12 && hour >= (timer.Hour()%12) {
+		if timer.Hour()>12 && hour < 12{
 			hour += 12
 		}
+		if hour <= timer.Hour() && minute <= timer.Minute() {
+			return -1,-1
+		}
+
 	}
 
 	if minute == 0 {
